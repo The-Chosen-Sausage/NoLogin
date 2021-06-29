@@ -1,0 +1,25 @@
+﻿<Page x:Class="NoLogin.Verify"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NoLogin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Verify"
+      xmlns:ui="http://schemas.modernwpf.com/2019">
+
+    <Grid>
+        <Border Padding="50 20">
+            <ui:SimpleStackPanel HorizontalAlignment="Center">
+                <Label Content="Verify your password" FontSize="20" Margin="20" />
+                <PasswordBox x:Name="PassBox" KeyDown="OnKeyDownHandler"></PasswordBox>
+                <Label Foreground="Red" x:Name="FailedText" Visibility="Hidden">Verification failed.</Label>
+                <ui:ProgressRing Name="Ring" Visibility="Hidden"></ui:ProgressRing>
+                
+            </ui:SimpleStackPanel>
+
+
+        </Border>
+    </Grid>
+</Page>

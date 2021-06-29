@@ -1,0 +1,43 @@
+﻿<Page x:Class="NoLogin.Pages.About"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:NoLogin"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Home"
+       xmlns:ui="http://schemas.modernwpf.com/2019"
+       >
+
+    <Grid>
+        <Border Padding="50 20">
+            <ui:SimpleStackPanel>
+                <Label Content="About" FontSize="25" Margin="0 0 0 30"/>
+                <Grid>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="130"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+                    </Grid.RowDefinitions>
+                    <Label Grid.Row="0" Grid.Column="0" Content="ProductName"     /><Label Grid.Row="0" Grid.Column="1" x:Name="ProductName"   Content="NoLogin"/>
+                    <Label Grid.Row="1" Grid.Column="0" Content="Version"         /><Label Grid.Row="1" Grid.Column="1" x:Name="Version"       Content=""/>
+                    <Label Grid.Row="2" Grid.Column="0" Content="Author"          /><Label Grid.Row="2" Grid.Column="1" x:Name="Author"        Content="TheChosenSausage"/>
+                    <Label Grid.Row="3" Grid.Column="0" Content="Website"         /><Label Grid.Row="3" Grid.Column="1" x:Name="Website"       Content="TheChosenSausage.rf.gd"/>
+                    <Label Grid.Row="4" Grid.Column="0" Content="Email"           /><Label Grid.Row="4" Grid.Column="1" x:Name="Email"         Content="the.chosen.sausage.0510@gmail.com"/>
+                    <Label Grid.Row="5" Grid.Column="0" Content="References"      /><Label Grid.Row="5" Grid.Column="1" x:Name="References"    Content="ModernWPF:  https://github.com/Kinnara/ModernWpf"/>
+                </Grid>
+            </ui:SimpleStackPanel>
+
+
+        </Border>
+    </Grid>
+</Page>

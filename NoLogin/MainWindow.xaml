@@ -1,0 +1,35 @@
+﻿<Window x:Class="NoLogin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NoLogin"
+        mc:Ignorable="d"
+        Title="NoLogin" Height="450" Width="800"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+        ui:WindowHelper.UseModernWindowStyle="True">
+    <Grid>
+
+
+        <ui:NavigationView VerticalContentAlignment="Top"  
+                           OpenPaneLength="200" 
+                           IsPaneToggleButtonVisible="False" 
+                           BackRequested="NavigationView_BackRequested"
+                           IsBackEnabled="True"
+                           SelectionChanged="SwitchPage"
+                           PaneDisplayMode="Left"
+                           IsEnabled="False"
+                           x:Name="NavView" x:FieldModifier="public">
+            <ui:NavigationView.MenuItems>
+                <ui:NavigationViewItem Icon="Home" x:Name="HomeNavItem" x:FieldModifier="public" Content="Home"/>
+                <ui:NavigationViewItem Icon="Manage" Content="About"/>
+            </ui:NavigationView.MenuItems>
+        </ui:NavigationView>
+        <ui:Frame x:Name="MainFrame" Source="Pages\Verify.xaml" Margin="200 0 0 0"></ui:Frame>
+       
+        
+        
+
+
+    </Grid>
+</Window>

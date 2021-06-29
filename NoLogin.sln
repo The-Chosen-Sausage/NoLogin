@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28729.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoLogin", "NoLogin\NoLogin.csproj", "{B314733D-9C68-4CF8-B6D6-92093BDFAE67}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Debug|x64.ActiveCfg = Release|x64
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Debug|x64.Build.0 = Release|x64
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Release|x64.ActiveCfg = Release|x64
+		{B314733D-9C68-4CF8-B6D6-92093BDFAE67}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85C3638C-1FAA-40A6-902E-6209E10EEC31}
+	EndGlobalSection
+EndGlobal
