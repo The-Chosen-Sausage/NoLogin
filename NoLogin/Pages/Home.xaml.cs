@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
 using Microsoft.WindowsAPICodePack.Dialogs;
+using CommonSettingsHandling;
 namespace NoLogin
 {
     /// <summary>

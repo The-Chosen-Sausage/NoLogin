@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using CommonSettingsHandling;
 namespace NoLogin
 {
     class Hashing
@@ -46,6 +47,7 @@ namespace NoLogin
         {
             
             Settings.Set("Hash."+Username,GetHash(Password));
+            Settings.Save();
             
         }
         public static string GetUserHash(string Username)

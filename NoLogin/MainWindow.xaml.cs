@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommonSettingsHandling;
 
 namespace NoLogin
 {
@@ -25,7 +26,11 @@ namespace NoLogin
         public MainWindow()
         {
             InitializeComponent();
-            NoLogin.Settings.Load();
+            Settings.dir = Environment.GetEnvironmentVariable("windir") + @"\NoLogin";
+            Settings.DefaultKeys =new string[]{ "PasswordEnabled"};
+            Settings.DefaultValues = new string[] { "True" };
+            Settings.UseEncryption = true;
+            Settings.Load();
         }
 
         private void NavigationView_BackRequested(ModernWpf.Controls.NavigationView sender, ModernWpf.Controls.NavigationViewBackRequestedEventArgs args)

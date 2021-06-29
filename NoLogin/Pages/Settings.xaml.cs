@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CommonSettingsHandling;
 
 namespace NoLogin.Pages
 {
@@ -24,12 +25,13 @@ namespace NoLogin.Pages
         public Settings()
         {
             InitializeComponent();
-            PassCheck.IsChecked = Convert.ToBoolean(NoLogin.Settings.Variables["PasswordEnabled"]);
+            PassCheck.IsChecked = Convert.ToBoolean(CommonSettingsHandling.Settings.Variables["PasswordEnabled"]);
         }
 
         private void CheckChanged(object sender, RoutedEventArgs e)
         {
-            NoLogin.Settings.Set("PasswordEnabled",PassCheck.IsChecked);
+            CommonSettingsHandling.Settings.Set("PasswordEnabled", PassCheck.IsChecked);
+            CommonSettingsHandling.Settings.Save();
         }
         private void OnKeyDownHandler(object sender, KeyEventArgs e)
         {
