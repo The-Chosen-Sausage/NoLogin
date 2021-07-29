@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Diagnostics;
 using CommonSettingsHandling;
 
 namespace NoLogin
@@ -91,6 +92,16 @@ namespace NoLogin
                     (window as MainWindow).HomeNavItem.IsSelected = true;
                 }
             }
+        }
+
+        
+
+        private void Show_Numpad(object sender, RoutedEventArgs e)
+        {
+            
+            foreach (var process in Process.GetProcessesByName("TabTip"))
+                process.Kill();
+            Process.Start(@"C:\Program Files\Common Files\Microsoft Shared\ink\TabTip.exe");
         }
     }
 }

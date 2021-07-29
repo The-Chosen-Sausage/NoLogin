@@ -13,7 +13,7 @@
         <Border Padding="50 20">
             <ui:SimpleStackPanel HorizontalAlignment="Center">
                 <Label Content="Verify your password" FontSize="20" Margin="20" />
-                <PasswordBox x:Name="PassBox" KeyDown="OnKeyDownHandler"></PasswordBox>
+                <PasswordBox x:Name="PassBox" KeyDown="OnKeyDownHandler" GotFocus="Show_Numpad"></PasswordBox>
                 <Label Foreground="Red" x:Name="FailedText" Visibility="Hidden">Verification failed.</Label>
                 <ui:ProgressRing Name="Ring" Visibility="Hidden"></ui:ProgressRing>
                 

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Diagnostics;
+using System.Threading;
 using Microsoft.WindowsAPICodePack.Dialogs;
 using CommonSettingsHandling;
 namespace NoLogin
@@ -30,13 +31,20 @@ namespace NoLogin
         
         private void LaunchExploer(object sender, RoutedEventArgs e)
         {
-            CommonOpenFileDialog o =new CommonOpenFileDialog();
-            
+            CommonOpenFileDialog o = new CommonOpenFileDialog();
+            o.Multiselect = true;
+
             var i = o.ShowDialog();
-            if (i == CommonFileDialogResult.Ok)
+            if (i == CommonFileDialogResult.Ok && !o.Multiselect)
             {
                 try { Process.Start(o.FileName); } catch { };
             }
+            Thread t = new Thread(() =>
+            {
+                
+            });
+            t.Start();
+            
         }
 
         private void CMD(object sender, RoutedEventArgs e)
@@ -46,14 +54,20 @@ namespace NoLogin
 
         private void StartMenu(object sender, RoutedEventArgs e)
         {
-            CommonOpenFileDialog o =new CommonOpenFileDialog();
+            CommonOpenFileDialog o = new CommonOpenFileDialog();
             o.InitialDirectory = @"C:\ProgramData\Microsoft\Windows\Start Menu\Programs";
-            var i=o.ShowDialog();
-            if (i==CommonFileDialogResult.Ok)
+            o.Multiselect = true;
+            var i = o.ShowDialog();
+            if (i == CommonFileDialogResult.Ok && !o.Multiselect)
             {
                 try { Process.Start(o.FileName); } catch { };
             }
 
+            Thread t =new Thread(() =>
+            {
+                
+            });
+            t.Start();
         }
 
         private void TaskMgr(object sender, RoutedEventArgs e)
